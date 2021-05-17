@@ -232,13 +232,13 @@ ItemDisplay[(gfv OR gfw OR gfg OR gfr OR gfb OR gfy OR skf) CLVL>29]:
 ItemDisplay[(gsv OR gsw OR gsg OR gsr OR gsb OR gsy OR sku) CLVL>49]:
 
 ----//Flawless - Perfect
-ItemDisplay[gzv OR gpv]:%PURPLE%* %ORANGE%%NAME%%WHITE% x%QTY%%PURPLE% *
-ItemDisplay[glw OR gpw]:%WHITE%* %ORANGE%%NAME%%WHITE% x%QTY%%WHITE% *
-ItemDisplay[glg OR gpg]:%GREEN%* %ORANGE%%NAME%%WHITE% x%QTY%%GREEN% *
-ItemDisplay[glr OR gpr]:%RED%* %ORANGE%%NAME%%WHITE% x%QTY%%RED% *
-ItemDisplay[glb OR gpb]:%BLUE%* %ORANGE%%NAME%%WHITE% x%QTY%%BLUE% *
-ItemDisplay[gly OR gpy]:%YELLOW%* %ORANGE%%NAME%%WHITE% x%QTY%%YELLOW% *
-ItemDisplay[skl OR skz]:%GRAY%* %ORANGE%%NAME%%WHITE% x%QTY%%GRAY% *
+ItemDisplay[gzv OR gpv]:%PURPLE%* %ORANGE%%NAME%%PURPLE% *
+ItemDisplay[glw OR gpw]:%WHITE%* %ORANGE%%NAME%%WHITE% *
+ItemDisplay[glg OR gpg]:%GREEN%* %ORANGE%%NAME%%GREEN% *
+ItemDisplay[glr OR gpr]:%RED%* %ORANGE%%NAME%%RED% *
+ItemDisplay[glb OR gpb]:%BLUE%* %ORANGE%%NAME%%BLUE% *
+ItemDisplay[gly OR gpy]:%YELLOW%* %ORANGE%%NAME%%YELLOW% *
+ItemDisplay[skl OR skz]:%GRAY%* %ORANGE%%NAME%%GRAY% *
 
 ----//Perfect Stack
 ItemDisplay[gpvs]:%PURPLE%* %ORANGE%%NAME%%WHITE% x%QTY%%PURPLE% *{%WHITE%Shields: +30 Defense%NL%Armor/Helms: +10 Strength%NL%Weapons: +150 Attack Rating%NL%}
@@ -873,7 +873,7 @@ ItemDisplay[MAG ARMOR ETH]:
 ItemDisplay[MAG (WP11 OR WP12) ETH]:
 ItemDisplay[MAG (CL1 OR CL2 OR CL3 OR CL4 OR CL6) ETH]:
 ItemDisplay[(WEAPON OR ARMOR) NMAG !SUP !ETH !RW !CL5]:
-ItemDisplay[(ARMOR OR WEAPON) MAG !ID !ETH !amu CLVL>70]:
+ItemDisplay[(ARMOR OR WEAPON) MAG !ID !ETH !amu !lwb !8lw !6lw CLVL>70]:
 ItemDisplay[(ARMOR OR WEAPON) RARE !ID !ETH CLVL>70]:
 ItemDisplay[SET !ELT CLVL>85]:
 
