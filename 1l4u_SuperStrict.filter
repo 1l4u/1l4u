@@ -112,8 +112,7 @@ ItemDisplay[mp4 CLVL>59]:
 --------------------------------------------------------------------------------------------------------------------------------
 //BASE ED
 ----//ED
-ItemDisplay[WEAPON NMAG (ED>0 AND ED<15) CLVL<90]:%GRAY%%NAME% %GRAY%[%GREEN%ED%GRAY%]%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[WEAPON NMAG ED<15 SUP !ETH !RW CLVL>90]:
+ItemDisplay[WEAPON NMAG (ED>0 AND ED<15)]:%GRAY%%NAME% %GRAY%[%GREEN%ED%GRAY%]%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
 ItemDisplay[WEAPON NMAG ED=15]:%GRAY%%NAME% %GRAY%[%RED%+15% %GREEN%ED%GRAY%]%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
 ItemDisplay[ARMOR NMAG (ED>0 AND ED<15) CLVL<90]:%GRAY%%NAME% %GRAY%[%GREEN%ED%GRAY%]%CONTINUE%
 ItemDisplay[ARMOR NMAG (ED>0 AND ED<15) !RW CLVL>90]:
@@ -125,7 +124,7 @@ ItemDisplay[ETH UNI ID WEAPON]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%{{
 ItemDisplay[ETH MAG WEAPON !ID ]:%GRAY%[%WHITE%Eth%GRAY%] %BLUE%%NAME%%GRAY%
 ItemDisplay[ETH RARE WEAPON !ID ]:%GRAY%[%WHITE%Eth%GRAY%] %YELLOW%%NAME%%GRAY%
 ItemDisplay[ETH CRAFT WEAPON !ID ]:%GRAY%[%WHITE%Eth%GRAY%] %ORANGE%%NAME%%GRAY%
-ItemDisplay[ETH NMAG WEAPON]:%GRAY%[%WHITE%Eth%GRAY%] %NAME%%GRAY%
+ItemDisplay[ETH NMAG WEAPON ELT]:%GRAY%[%WHITE%Eth%GRAY%] %NAME%%GRAY%
 
 ItemDisplay[ETH UNI !ID ARMOR]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%
 ItemDisplay[ETH UNI ID ARMOR]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%
@@ -876,7 +875,6 @@ ItemDisplay[(WEAPON OR ARMOR) NMAG !SUP !ETH !RW !CL5]:
 ItemDisplay[(ARMOR OR WEAPON) MAG !ID !ETH !amu !lwb !8lw !6lw CLVL>70]:
 ItemDisplay[(ARMOR OR WEAPON) RARE !ID !ETH CLVL>70]:
 ItemDisplay[SET !ELT CLVL>85]:
-
 ItemDisplay[NMAG !RW ID (NORM OR EXC OR ELT) CLVL<65]: %NAME% 
 ItemDisplay[NMAG !RW ID (NORM OR EXC OR ELT) CLVL>64]:
 
