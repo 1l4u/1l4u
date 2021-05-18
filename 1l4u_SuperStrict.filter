@@ -112,18 +112,20 @@ ItemDisplay[mp4 CLVL>59]:
 --------------------------------------------------------------------------------------------------------------------------------
 //BASE ED
 ----//ED
-ItemDisplay[WEAPON NMAG (ED>0 AND ED<15)]:%GRAY%%NAME% %GRAY%[%GREEN%ED%GRAY%]%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[WEAPON NMAG ED=15]:%GRAY%%NAME% %GRAY%[%RED%+15% %GREEN%ED%GRAY%]%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[ARMOR NMAG (ED>0 AND ED<15) CLVL<90]:%GRAY%%NAME% %GRAY%[%GREEN%ED%GRAY%]%CONTINUE%
-ItemDisplay[ARMOR NMAG (ED>0 AND ED<15) !RW CLVL>90]:
-ItemDisplay[ARMOR NMAG ED=15]:%GRAY%%NAME% %GRAY%[%RED%+15% %GREEN%ED%GRAY%]%CONTINUE%
+ItemDisplay[WEAPON NMAG !RW (ED>0 AND ED<15) CLVL<90]:%GRAY%%NAME% %GRAY%[%GREEN%ED%GRAY%]%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[WEAPON NMAG !RW ED=15]:%GRAY%%NAME% %GRAY%[%RED%+15% %GREEN%ED%GRAY%]%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[WEAPON NMAG !RW ED<15 CVLV>89]:
+
+ItemDisplay[ARMOR NMAG !RW (ED>0 AND ED<15) CLVL<90]:%GRAY%%NAME% %GRAY%[%GREEN%ED%GRAY%]%CONTINUE%
+ItemDisplay[ARMOR NMAG !RW (ED>0 AND ED<15) !RW CLVL>90]:
+ItemDisplay[ARMOR NMAG !RW ED=15]:%GRAY%%NAME% %GRAY%[%RED%+15% %GREEN%ED%GRAY%]%CONTINUE%
 
 ----//ETH
 ItemDisplay[ETH UNI !ID WEAPON]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
 ItemDisplay[ETH UNI ID WEAPON]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%{{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[ETH MAG WEAPON !ID ]:%GRAY%[%WHITE%Eth%GRAY%] %BLUE%%NAME%%GRAY%
-ItemDisplay[ETH RARE WEAPON !ID ]:%GRAY%[%WHITE%Eth%GRAY%] %YELLOW%%NAME%%GRAY%
-ItemDisplay[ETH CRAFT WEAPON !ID ]:%GRAY%[%WHITE%Eth%GRAY%] %ORANGE%%NAME%%GRAY%
+ItemDisplay[ETH MAG WEAPON !ID ]:%GRAY%[%WHITE%Eth%GRAY%] %BLUE%%NAME%%GRAY%%CONTINUE%
+ItemDisplay[ETH RARE WEAPON !ID ]:%GRAY%[%WHITE%Eth%GRAY%] %YELLOW%%NAME%%GRAY%%CONTINUE%
+ItemDisplay[ETH CRAFT WEAPON !ID ]:%GRAY%[%WHITE%Eth%GRAY%] %ORANGE%%NAME%%GRAY%%CONTINUE%
 ItemDisplay[ETH NMAG WEAPON ELT]:%GRAY%[%WHITE%Eth%GRAY%] %NAME%%GRAY%
 
 ItemDisplay[ETH UNI !ID ARMOR]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%
@@ -324,7 +326,7 @@ ItemDisplay[UNI ID cm1 (STAT3=60 AND STAT1=20 AND STAT85=10 AND RES=20)]:%RED%* 
 ItemDisplay[UNI ID cm1 (STAT3=60 AND STAT1<20 AND STAT85<10 AND RES<20)]:%RED%* %TAN%60V %PURPLE%Annihilus%DOT-0C%%BORDER-4B%%CONTINUE%
 ItemDisplay[UNI ID cm1 (STAT3=60 AND STAT1<20 AND STAT85<10 AND RES=20)]:%RED%* %TAN%60V-20R %PURPLE%Annihilus%DOT-0C%%BORDER-4B%%CONTINUE%
 ItemDisplay[UNI ID cm1 (STAT3<60 AND STAT1<20 AND STAT85<10 AND RES=20)]:%RED%* %TAN%20R %PURPLE%Annihilus%DOT-0C%%BORDER-4B%%CONTINUE%
-ItemDisplay[UNI ID cm1 ]:%RED%* %PURPLE%Annihilus%DOT-0C%%BORDER-4B%%CONTINUE%
+ItemDisplay[UNI ID cm1 (STAT3<60 AND STAT1<20 AND STAT85<10 AND RES<20)]:%RED%* %PURPLE%Annihilus%DOT-0C%%BORDER-4B%%CONTINUE%
 
 ItemDisplay[UNI ID cm2 CLSK0=1]:%RED%* %PURPLE%Hellfire Torch%DOT-0C%%BORDER-4B%%TAN% Amazon%CONTINUE%
 ItemDisplay[UNI ID cm2 CLSK1=1]:%RED%* %PURPLE%Hellfire Torch%DOT-0C%%BORDER-4B%%TAN% Sorceress%CONTINUE%
@@ -388,9 +390,9 @@ ItemDisplay[UNI ID cm3 (MFIND=40 AND GFIND=160 AND STAT87=15)]:%TAN%Perfect %PUR
 ItemDisplay[SET !ID !ELT !rin !amu CLVL>80]:
 ItemDisplay[SET !ID !ELT CLVL<80]:%GREEN%* %NAME% *%DOT-84%
 ItemDisplay[SET !ID ELT]:%GREEN%* %NAME% *%DOT-84%
-ItemDisplay[SET WEAPON ID ELT]:%GREEN%* %NAME% *%DOT-84%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[SET amu]:%GREEN%* %NAME% *%DOT-84% 
-ItemDisplay[SET rin]:%GREEN%* %NAME% *%DOT-84% 
+ItemDisplay[SET WEAPON ID ELT]:%GREEN%* %NAME% *{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[SET amu]:%GREEN%* %NAME% *
+ItemDisplay[SET rin]:%GREEN%* %NAME% *
 --------------------------------------------------------------------------------------------------------------------------------
 //MAGIC
 ----//Craft WEAPON
@@ -399,8 +401,8 @@ ItemDisplay[MAG WEAPON ID ILVL>71]:%GRAY%[%WHITE%Eth%GRAY%] %BLUE%%NAME% {%NL%%W
 ----//Ring - Amulet
 ItemDisplay[MAG rin !ID ILVL>84]:%BLUE%* %NAME% %GRAY%[%WHITE%%ILVL%%GRAY%] %BLUE%*
 ItemDisplay[MAG amu !ID ILVL>84]:%BLUE%* %NAME% %GRAY%[%WHITE%%ILVL%%GRAY%] %BLUE%*
-ItemDisplay[MAG rin ID]:%NAME% %GRAY%[%NL%%WHITE%%ILVL%%GRAY%]{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel%NL%}
-ItemDisplay[MAG amu ID]:%NAME% %GRAY%[%NL%%WHITE%%ILVL%%GRAY%]{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel%NL%}
+ItemDisplay[MAG rin ID]:%NAME% %GRAY%[%WHITE%%ILVL%%GRAY%]{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel}
+ItemDisplay[MAG amu ID]:%NAME% %GRAY%[%WHITE%%ILVL%%GRAY%]{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel}
 ItemDisplay[MAG (rin OR amu) ILVL<85]:
 ----//Gloves +3/20
 ItemDisplay[MAG ID EQ4 !ETH TABSK0=3 IAS=20]:%DARK_GREEN%20Ias %ORANGE%3 Bow % Crossbow %BLUE%%NAME%
@@ -870,50 +872,19 @@ ItemDisplay[WEAPON EXC SET ID]: %NAME%{%WHITE%Upgrade: %ORANGE%Lum %WHITE%+ %ORA
 //HIDE
 ----//Weapons:Axe, Mace, Sword, Dagger, Throwing Weapon, Javelin, Spear, Polearm, Bow, Crossbow
 ItemDisplay[MAG (WP1 OR WP2 OR WP3 OR WP4 OR WP5 OR WP6 OR WP7 OR WP8 OR WP9 OR WP10) !ID]:
-
-----//Elite Helm
-ItemDisplay[ELT MAG EQ1 !ID ILVL>60]:
-
-----//Norm - Exc Helm
-ItemDisplay[!ELT MAG EQ1 !ID ILVL>60]:
-
-----//Elite Chest
-ItemDisplay[ELT MAG EQ2 !ID ILVL>60]:
-
-----//Norm - Exc Chest
-ItemDisplay[!ELT MAG EQ2 !ID ILVL>60]:
-
-----//Shields
+ItemDisplay[MAG EQ1 !ID ILVL>60]:
+ItemDisplay[MAG EQ2 !ID ILVL>60]:
 ItemDisplay[MAG EQ3 !ID !uit !ush ILVL>60]:
-
-----//Elite Boots
-ItemDisplay[ELT MAG EQ5 !ID ILVL>60]:
-
-----//Norm - Exc Boots
-ItemDisplay[!ELT MAG EQ5 !ID ILVL>60]:
-
-----//Elite Belts
-ItemDisplay[ELT MAG EQ6 !ID ILVL>60]:
-
-----//Norm - Exc Belts
-ItemDisplay[!ELT MAG EQ6 !ID ILVL>60]:
-
-----//Gloves
+ItemDisplay[MAG EQ5 !ID ILVL>60]:
+ItemDisplay[MAG EQ6 !ID ILVL>60]:
 ItemDisplay[MAG (xhg OR xlg OR ulg OR utg OR xtg) !ID ILVL>60]:
 
-----//Vendor
 ItemDisplay[NMAG (WP11 OR WP12 OR WP13 OR CL4 OR CL6) ILVL>1]:
-
-----//Axe
 ItemDisplay[NMAG !RW (hax OR 7ha OR axe OR 9ax OR 7ax OR 2ax OR 92a OR 72a OR mpi OR 9mp OR 7mp OR wax OR 9wa) ILVL>1]:
 ItemDisplay[NMAG !RW ILVL>60 (SOCK=1 OR SOCK=2 OR SOCK=3) 7wa]:
 ItemDisplay[NMAG !RW (lax OR 9la OR 7la OR bax OR 9ab OR 7ba OR btx OR 9bt OR 7bt OR gax OR 9ga OR 7ga OR gix OR 9gi OR 7gi) ILVL>1]:
-
-----//Mace
 ItemDisplay[NMAG !RW (clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 7mt OR 9mt OR fla) ILVL>1]:
 ItemDisplay[NMAG !RW (9fl OR 9fl OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR gam OR 9gm OR 7gm) ILVL>1]:
-
-----//Sword
 ItemDisplay[NMAG !RW !SOCK=4 (lsd OR bsd)]:
 ItemDisplay[NMAG !RW (!SOCK=4 AND !SOCK=5) crs]:
 ItemDisplay[NMAG !RW (ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 9cr OR 7cr) ILVL>1]:
@@ -923,75 +894,35 @@ ItemDisplay[NMAG !RW (clm OR 9cm OR 7cm OR gis OR 9gs OR 7gs OR bsw OR 9b9 OR 7b
 ItemDisplay[NMAG !RW SOCK<5 7fb]:
 ItemDisplay[NMAG !RW (flb OR 9fb OR 7fb OR gsd OR 9gd) ILVL>1]:
 ItemDisplay[NMAG !RW SOCK<4 7gd]:
-
-----//Dagger
 ItemDisplay[NMAG !RW (dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR kri OR 9kr OR 7kr OR bld OR 9bl OR 7bl) ILVL>1]:
-
-----//Throwing
 ItemDisplay[NMAG !RW (tkf OR 9tk OR 7tk OR tax OR 9ta OR 7ta OR bkf OR 9bk OR 7bk OR bal OR 9b8 OR 7b8) ILVL>1]:
-
-----//Javelin
 ItemDisplay[NMAG !RW (jav OR 9ja OR 7ja OR pil OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts) ILVL>1]:
-
-----//Spear
 ItemDisplay[NMAG !RW (spr OR 9sr OR 9tr OR 7sr OR tri OR 7tr OR 7br OR spt OR 9st OR 7st OR pik OR 9p9) ILVL>1]:
 ItemDisplay[NMAG !RW !SOCK=4 (brn OR 9br) ILVL>1]:
-
-----////Polearm
 ItemDisplay[NMAG !RW (bar OR 9b7 OR 7o7) ILVL>1]:
 ItemDisplay[NMAG !RW !SOCK=4 (vou OR 9vo OR 7vo OR scy oR 9s8 OR 7s8 OR pax OR 9pa OR 7pa OR hal OR 9h9 OR 7h7 OR wsc OR 9wc OR 7wc) ILVL>1]:
-
-----//Bow
 ItemDisplay[NMAG !RW (sbw OR 8sb OR 6sb OR hbw OR 8hb OR 6hb OR lbw OR 8lb OR 6lb OR cbw OR 8cb OR 6cb OR sbb OR 8s8 OR 6s7 OR lbb OR 8l8 OR 6l7 OR swb OR 8sw OR 8lw OR lwb OR 6lw Or 6sw)]:
-
-----//Crossbow
 ItemDisplay[NMAG !RW (lxb OR 8lx OR 6lx OR mxb OR 8mx OR 6mx OR hxb OR 8hx OR 6hx OR rxb OR 8rs OR 6rs) ILVL>1]:
-
-----//None
 ItemDisplay[NMAG !RW (cap OR xap OR uap OR skp OR xkp OR ukp OR hlm OR xlm OR ulm OR fhl OR xhl OR uhl OR ghm OR xhm OR xhm OR uhm OR crn OR xrn OR urn OR msk OR xsk OR usk OR bhn OR xh9 OR uh9) ILVL>1]:
-
-----//Chest
 ItemDisplay[NMAG !RW (qui OR xui OR lea OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ful OR aar OR ltp OR xea OR xla OR xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul OR xar) ILVL>1]:
-
-----//Shield
 ItemDisplay[NMAG ETH !RW (ush OR urg OR uit) ILVL>1]:
 ItemDisplay[NMAG !RW (buc OR xuc OR uuc OR sml OR uml OR lrg OR xrg OR kit OR tow OR xow OR uow OR gts OR xts OR bsh OR xsh OR spk OR xpk OR upk) ILVL>1]:
-
-----//Gloves, Boots, Belts, Circlets
 ItemDisplay[NMAG (EQ4 OR EQ5 OR EQ6 OR ci0 OR ci1) !RW ILVL>1]:
-
-----//Pelts
 ItemDisplay[NMAG !RW CL1 SOCK=1]:
 ItemDisplay[NMAG !RW CL1 ETH]:
-
-----//Barbarian
 ItemDisplay[NMAG CL2 !RW SOCK=1]:
 ItemDisplay[NMAG CL2 !RW ETH]:
 ItemDisplay[NMAG !RW CL2 SOCK>1 !ETH]:
-
-----//Paladin
 ItemDisplay[NMAG !RW CL3 (SOCK=1 OR RES<20) ILVL>55]:
-
-----//Claws
 ItemDisplay[NMAG ktr ILVL>26]:
 ItemDisplay[NMAG !RW (wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb OR 9xf OR 9cs OR 9qr OR 7ar OR 7wb OR 7xf OR 7cs OR 7qr) ILVL>1]:
-
-----//Amazon
 ItemDisplay[NMAG !RW (am1 OR am2 OR am3 OR am4 OR am5 OR am6 OR am7 OR am8 OR am9 OR ama OR amf OR amd OR amb) ILVL>1]:
 ItemDisplay[NMAG !RW !SOCK=4 (amc OR ame) ILVL>1]:
-
-----//Heads
 ItemDisplay[NMAG !RW CL4 SOCK=1 ILVL>24]:
 ItemDisplay[NMAG !RW CL4 ETH ILVL>24]:
 ItemDisplay[NMAG !RW CL4 SOCK=1 ILVL<25]:%NAME% 
 ItemDisplay[NMAG !RW CL4 SOCK=2 !ETH ILVL>24]:%NAME%
 
-----//Orbs
-ItemDisplay[NMAG !RW CL4 SOCK=1 ILVL>24]:
-ItemDisplay[NMAG !RW CL4 SOCK=1 ILVL<25]:%NAME%
-ItemDisplay[NMAG !RW CL4 SOCK>1 ILVL>24]:%NAME%
-
-----//None
 ItemDisplay[MAG ARMOR ETH]:
 ItemDisplay[MAG (WP11 OR WP12) ETH]:
 ItemDisplay[MAG (CL1 OR CL2 OR CL3 OR CL4 OR CL6) ETH]:
@@ -1007,3 +938,43 @@ ItemDisplay[INF ILVL<10 !RW !leg]:%NAME%
 ItemDisplay[INF !RW !leg]:
 ItemDisplay[aqv NMAG]:
 ItemDisplay[cqv NMAG]:
+
+ItemDisplay[NMAG !RW ID (NORM OR EXC) ETH CLVL>60]:
+ItemDisplay[NMAG !RW ID (7ha OR 7ax OR 72a OR 7mp OR 7la OR 7ba OR 7bt) ETH CLVL>90]:
+ItemDisplay[NMAG !RW ID (7cl OR 7sp OR 7ma OR 7mt OR 7fl OR 7wh OR 7m7) ETH CLVL>90]:
+ItemDisplay[NMAG !RW ID (7ss OR 7sm OR 7sb OR 7fc OR 7bs OR 7ls OR 7wd OR 72h OR 7cm OR 7gs OR 7b7) ETH CLVL>90]:
+ItemDisplay[NMAG !RW ID (7gd OR 7di OR 7kr OR 7bl) ETH CLVL>90]:
+ItemDisplay[NMAG !RW ID (7tk OR 7ta OR 7bk) ETH CLVL>90]:
+ItemDisplay[NMAG !RW ID (7ja OR 7pi OR 7s7) ETH CLVL>90]:
+ItemDisplay[NMAG !RW ID (6ss OR 6ls OR 6cs OR 6bs) ETH CLVL>90]:
+ItemDisplay[NMAG !RW ID (7wn OR 7yw OR 7bw OR 7gw) ETH CLVL>90]:
+ItemDisplay[NMAG !RW ID (7cs OR 7qs OR 7ws) ETH CLVL>90]:
+ItemDisplay[NMAG !RW ID (obb OR obc OR obe OR obd OR obf) ETH CLVL>90]:
+
+ItemDisplay[MAG (NORM OR EXC) ETH CLVL>60]:
+ItemDisplay[MAG (7ha OR 7ax OR 72a OR 7mp OR 7la OR 7ba OR 7bt) ETH CLVL>90]:
+ItemDisplay[MAG (7cl OR 7sp OR 7ma OR 7mt OR 7fl OR 7wh OR 7m7) ETH CLVL>90]:
+ItemDisplay[MAG (7ss OR 7sm OR 7sb OR 7fc OR 7bs OR 7ls OR 7wd OR 72h OR 7cm OR 7gs OR 7b7) ETH CLVL>90]:
+ItemDisplay[MAG (7gd OR 7di OR 7kr OR 7bl) ETH CLVL>90]:
+ItemDisplay[MAG (7tk OR 7ta OR 7bk) ETH CLVL>90]:
+ItemDisplay[MAG (7ja OR 7pi OR 7s7) ETH CLVL>90]:
+ItemDisplay[MAG (6ss OR 6ls OR 6cs OR 6bs) ETH CLVL>90]:
+ItemDisplay[MAG (7wn OR 7yw OR 7bw OR 7gw) ETH CLVL>90]:
+ItemDisplay[MAG (7cs OR 7qs OR 7ws) ETH CLVL>90]:
+ItemDisplay[MAG (obb OR obc OR obe OR obd OR obf) ETH CLVL>90]:
+ItemDisplay[MAG (EQ1 OR EQ2 OR EQ3 OR EQ4 OR EQ5 OR EQ6) ETH]:
+
+ItemDisplay[RARE (NORM OR EXC) ETH CLVL>60]:
+ItemDisplay[RARE (7ha OR 7ax OR 72a OR 7mp OR 7la OR 7ba OR 7bt) ETH CLVL>90]:
+ItemDisplay[RARE (7cl OR 7sp OR 7ma OR 7mt OR 7fl OR 7wh OR 7m7) ETH CLVL>90]:
+ItemDisplay[RARE (7ss OR 7sm OR 7sb OR 7fc OR 7bs OR 7ls OR 7wd OR 72h OR 7cm OR 7gs OR 7b7) ETH CLVL>90]:
+ItemDisplay[RARE (7gd OR 7di OR 7kr OR 7bl) ETH CLVL>90]:
+ItemDisplay[RARE (7tk OR 7ta OR 7bk) ETH CLVL>90]:
+ItemDisplay[RARE (7ja OR 7pi OR 7s7) ETH CLVL>90]:
+ItemDisplay[RARE (6ss OR 6ls OR 6cs OR 6bs) ETH CLVL>90]:
+ItemDisplay[RARE (7wn OR 7yw OR 7bw OR 7gw) ETH CLVL>90]:
+ItemDisplay[RARE (7cs OR 7qs OR 7ws) ETH CLVL>90]:
+ItemDisplay[RARE (obb OR obc OR obe OR obd OR obf) ETH CLVL>90]:
+
+ItemDisplay[RARE (WP2 OR WP4 OR WP11 OR WP12) ETH]:
+ItemDisplay[RARE (EQ1 OR EQ2 OR EQ3 OR EQ4 OR EQ5 OR EQ6) ETH]:
