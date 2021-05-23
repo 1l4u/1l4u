@@ -5,11 +5,11 @@
 // Version 1.0
 
 //Discription
-ItemDisplay[CRAFT WEAPON ID ETH]:%GRAY%[%WHITE%Eth%GRAY%] %ORANGE%%NAME%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[MAG WEAPON ID ETH]:%GRAY%[%WHITE%Eth%GRAY%] %BLUE%%NAME%{%WHITE%-Hit:%ORANGE% Tir%WHITE% +%BLUE% O %White%-Caster:%ORANGE% Tir%WHITE% +%PURPLE% O %WHITE%-Blood:%ORANGE% Ort%WHITE% +%RED% O%NL%%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[CRAFT WEAPON ID ETH SOCK=0]:%GRAY%[%WHITE%Eth%GRAY%] %ORANGE%%NAME%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[MAG WEAPON ID ETH SOCK=0]:%GRAY%[%WHITE%Eth%GRAY%]%BLUE%%NAME%{%WHITE%-Hit:%ORANGE% Tir%WHITE% +%BLUE% O %White%-Caster:%ORANGE% Tir%WHITE% +%PURPLE% O %WHITE%-Blood:%ORANGE% Ort%WHITE% +%RED% O%NL%%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
 ItemDisplay[MAG WEAPON ID !ETH SOCK=0]:%BLUE%%NAME%{%WHITE%-Hit:%ORANGE% Tir%WHITE% +%BLUE% O %White%-Caster:%ORANGE% Tir%WHITE% +%PURPLE% O %WHITE%-Blood:%ORANGE% Ort%WHITE% +%RED% O%NL%%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
 ItemDisplay[MAG WEAPON ID !ETH SOCK>0]:%BLUE%%NAME%%GRAY%[%WHITE%%SOCKETS%%GRAY%]{%WHITE%-Hit:%ORANGE% Tir%WHITE% +%BLUE% O %White%-Caster:%ORANGE% Tir%WHITE% +%PURPLE% O %WHITE%-Blood:%ORANGE% Ort%WHITE% +%RED% O%NL%%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[RARE WEAPON ID ETH]:%GRAY%[%WHITE%Eth%GRAY%] %YELLOW%%NAME%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[RARE WEAPON ID ETH SOCK=0]:%GRAY%[%WHITE%Eth%GRAY%] %YELLOW%%NAME%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
 ItemDisplay[MAG WEAPON ID ETH SOCK>0]:%GRAY%[%WHITE%Eth%GRAY%]%BLUE%%NAME% %GRAY%[%WHITE%%SOCKETS%%GRAY%]{%WHITE%-Hit:%ORANGE% Tir%WHITE% +%BLUE% O %White%-Caster:%ORANGE% Tir%WHITE% +%PURPLE% O %WHITE%-Blood:%ORANGE% Ort%WHITE% +%RED% O%NL%%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
 ItemDisplay[RARE WEAPON ID ETH SOCK>0]:%GRAY%[%WHITE%Eth%GRAY%] %YELLOW%%NAME% %GRAY%[%WHITE%%SOCKETS%%GRAY%]{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
 ItemDisplay[CRAFT WEAPON ID ETH SOCK>0]:%GRAY%[%WHITE%Eth%GRAY%] %ORANGE%%NAME% %GRAY%[%WHITE%%SOCKETS%%GRAY%]{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
@@ -114,7 +114,7 @@ ItemDisplay[mp4 CLVL>59]:
 ----//ED
 ItemDisplay[WEAPON NMAG !RW (ED>0 AND ED<15) CLVL<90]:%GRAY%%NAME% %GRAY%[%GREEN%ED%GRAY%]%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
 ItemDisplay[WEAPON NMAG !RW ED=15]:%GRAY%%NAME% %GRAY%[%RED%+15% %GREEN%ED%GRAY%]%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[WEAPON NMAG !RW ED<15 CVLV>89]:
+//ItemDisplay[WEAPON NMAG !RW ED<15 CVLV>89]:
 
 ItemDisplay[ARMOR NMAG !RW (ED>0 AND ED<15) CLVL<90]:%GRAY%%NAME% %GRAY%[%GREEN%ED%GRAY%]%CONTINUE%
 ItemDisplay[ARMOR NMAG !RW (ED>0 AND ED<15) !RW CLVL>90]:
@@ -293,24 +293,6 @@ ItemDisplay[UNI !ID ILVL<87 uar]:%RED%*%YELLOW%*%GREEN%*%BLUE%*          %PURPLE
 ItemDisplay[UNI !ID]:%RED%* %GOLD%%NAME% %RED%*%BORDER-A5%%DOT-62%
 --------------------------------------------------------------------------------------------------------------------------------
 //UNIQUE Indentify
-----//3 Skill - Mara
-ItemDisplay[amu UNI ID ALLSK=3]:%TAN%3 Skill %GOLD%%NAME%%BORDER-4B%%DOT-0C%%CONTINUE%
-
-----//3 Skill - Harlequin Crest - Steel Shade - Andariel Visage - Nightwing - Lidless Wall
-ItemDisplay[UNI ID (uap OR ulm OR usk OR uhm OR xsh) ALLSK=3]:%TAN%3 Skill %GOLD%%NAME%%BORDER-4B%%DOT-0C%%CONTINUE%
-
-----//2 Skill - Vipermagi - Gerke's - Griffon
-ItemDisplay[UNI ID (xea OR uea OR xth OR uth OR xow OR ci3) ALLSK=2]:%TAN%2 Skill %GOLD%%NAME%%BORDER-4B%%DOT-0C%%CONTINUE%
-
-----//Cbf Corrupted
-ItemDisplay[UNI ID STAT153=1 !umb !ci2]:%TAN%Cbf %GOLD%%NAME%%BORDER-4B%%DOT-0C%%CONTINUE%
-
-----//10Fcr Corrupted
-ItemDisplay[UNI ID (rin OR amu) STAT105=10]:%TAN%10Fcr %GOLD%%NAME%%BORDER-4B%%DOT-0C%%CONTINUE%
-
-----//1 Skill Firelizard
-ItemDisplay[UNI ID 7lw ALLSK=1]:%TAN%1 Skill %GOLD%%NAME%%BORDER-4B%%DOT-0C%%CONTINUE%
-
 ----//Socket Unique
 ItemDisplay[UNI ID SOCK>0]:%NAME% %GRAY%[%WHITE%%SOCKETS%%GRAY%]%BORDER-4B%%DOT-0C%%CONTINUE%
 
@@ -393,43 +375,40 @@ ItemDisplay[SET amu]:%GREEN%* %NAME% *
 ItemDisplay[SET rin]:%GREEN%* %NAME% *
 --------------------------------------------------------------------------------------------------------------------------------
 //MAGIC
-----//Craft WEAPON
-ItemDisplay[MAG WEAPON ID ETH ILVL>71]:%GRAY%[%WHITE%Eth%GRAY%] %BLUE%%NAME% {%NL%%WHITE%Hit:%ORANGE% Tir%WHITE% +%BLUE% Sapphire%NL%%White%Caster:%ORANGE% Tir%WHITE% +%PURPLE% Amethyst%NL%%WHITE%Blood:%ORANGE% Ort%WHITE% +%RED% Ruby%NL%%TAN%Craft:%BLUE% Jewel%NL%}
-
 ----//Ring - Amulet
 ItemDisplay[MAG rin !ID ILVL>70]:%BLUE%* %NAME% %GRAY%[%WHITE%%ILVL%%GRAY%] %BLUE%*
-ItemDisplay[MAG rin ID ILVL=71]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 99-}
-ItemDisplay[MAG rin ID ILVL=72]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 98-}
-ItemDisplay[MAG rin ID ILVL=73]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 97-}
-ItemDisplay[MAG rin ID ILVL=74]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 96-}
-ItemDisplay[MAG rin ID ILVL=75]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 95-}
-ItemDisplay[MAG rin ID ILVL=76]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 94-}
-ItemDisplay[MAG rin ID ILVL=77]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 93-}
-ItemDisplay[MAG rin ID ILVL=78]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 92-}
-ItemDisplay[MAG rin ID ILVL=79]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 91-}
-ItemDisplay[MAG rin ID ILVL=80]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 90-}
-ItemDisplay[MAG rin ID ILVL=81]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 89-}
-ItemDisplay[MAG rin ID ILVL=82]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 88-}
-ItemDisplay[MAG rin ID ILVL=83]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 87-}
-ItemDisplay[MAG rin ID ILVL=84]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 86-}
-ItemDisplay[MAG rin ID ILVL>84]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 85-}
+ItemDisplay[MAG rin ID ILVL=71]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 99- - Jewel}
+ItemDisplay[MAG rin ID ILVL=72]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 98- - Jewel}
+ItemDisplay[MAG rin ID ILVL=73]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 97- - Jewel}
+ItemDisplay[MAG rin ID ILVL=74]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 96- - Jewel}
+ItemDisplay[MAG rin ID ILVL=75]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 95- - Jewel}
+ItemDisplay[MAG rin ID ILVL=76]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 94- - Jewel}
+ItemDisplay[MAG rin ID ILVL=77]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 93- - Jewel}
+ItemDisplay[MAG rin ID ILVL=78]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 92- - Jewel}
+ItemDisplay[MAG rin ID ILVL=79]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 91- - Jewel}
+ItemDisplay[MAG rin ID ILVL=80]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 90- - Jewel}
+ItemDisplay[MAG rin ID ILVL=81]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 89- - Jewel}
+ItemDisplay[MAG rin ID ILVL=82]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 88- - Jewel}
+ItemDisplay[MAG rin ID ILVL=83]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 87- - Jewel}
+ItemDisplay[MAG rin ID ILVL=84]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 86- - Jewel}
+ItemDisplay[MAG rin ID ILVL>84]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%WHITE%Hit: %ORANGE%Amn %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 85- - Jewel}
 
 ItemDisplay[MAG amu !ID ILVL>84]:%BLUE%* %NAME% %GRAY%[%WHITE%%ILVL%%GRAY%] %BLUE%*
-ItemDisplay[MAG amu ID ILVL=85]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 96+}
-ItemDisplay[MAG amu ID ILVL=86]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 94+}
-ItemDisplay[MAG amu ID ILVL=87]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 94+}
-ItemDisplay[MAG amu ID ILVL=88]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 92+}
-ItemDisplay[MAG amu ID ILVL=89]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 92+}
-ItemDisplay[MAG amu ID ILVL=90]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 90+}
-ItemDisplay[MAG amu ID ILVL=91]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 90+}
-ItemDisplay[MAG amu ID ILVL=92]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 88+}
-ItemDisplay[MAG amu ID ILVL=93]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 88+}
-ItemDisplay[MAG amu ID ILVL=94]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 86+}
-ItemDisplay[MAG amu ID ILVL=95]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 86+}
-ItemDisplay[MAG amu ID ILVL=96]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 84+}
-ItemDisplay[MAG amu ID ILVL=97]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 84+}
-ItemDisplay[MAG amu ID ILVL=98]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 82+}
-ItemDisplay[MAG amu ID ILVL=99]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Amn %WHITE%+ %PURPLE%Amethyst%NL%%TAN%Craft: %BLUE%Jewel %WHITE%- %TAN%Clvl 82+}
+ItemDisplay[MAG amu ID ILVL=85]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 96+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=86]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 96+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=87]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 94+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=88]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 94+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=89]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 92+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=90]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 92+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=91]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 90+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=92]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 90+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=93]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 88+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=94]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 88+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=95]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 86+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=96]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 86+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=97]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 84+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=98]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 84+ - Jewel}
+ItemDisplay[MAG amu ID ILVL=99]:%NAME%{%WHITE%Blood: %ORANGE%Sol %WHITE%+ %RED%Ruby%NL%%WHITE%Caster: %ORANGE%Ral %WHITE%+ %PURPLE%Amethyst%NL%%White%Hit: %ORANGE%Thul %WHITE%+ %BLUE%Sapphire%NL%%BLUE%Clvl 82+ - Jewel}
 
 
 ItemDisplay[MAG (rin OR amu) ILVL<85]:
@@ -925,7 +904,7 @@ ItemDisplay[MAG ETH !ID (tkf OR tax OR bkf OR bal OR 9tk OR 9ta OR 9bk OR 9b9 OR
 ItemDisplay[MAG ETH !ID (jav OR pil OR ssp OR 9ja OR 9pi OR 9s9 OR 7ja OR 7pi OR 7s7)]:
 ItemDisplay[MAG ETH !ID (spr OR tri OR brn OR spt OR 9sr OR 9tr OR 9br OR 9st OR 7sr OR 7tr OR 7br OR 7st)]:
 ItemDisplay[MAG ETH !ID (bar OR vou OR scy OR pax OR hal OR wsc OR 9b7 OR 9vo OR 9s8 OR 9pa OR 9h9 OR 9wc OR 7o7 OR 7vo OR 7s8 OR 7pa OR 7h7 OR 7wc)]:
-ItemDisplay[MAG !ETH !ID (lxb OR mxb OR rxb OR 8lx OR 8mx OR 8rx OR 6lx OR 6mx OR 6rx)]:
+ItemDisplay[MAG !ETH !ID (lxb OR mxb OR rxb OR 8lx OR 8mx OR 8rx OR 6lx OR 6mx OR 6rx OR 6lw OR 8lw OR lwb OR 6hx OR 8hx OR hxb)]:
 ItemDisplay[MAG ETH !ID (sst OR lst OR cst OR bst OR wst OR 8ss OR 8ls OR 8bs OR 8ws OR 6ss OR 6ls OR 6cs OR 6bs OR 6ws)]:
 ItemDisplay[MAG ETH !ID (wnd OR ywn OR bwn OR gwn OR 9wn OR 9yw OR 9bw OR 9gw OR 7wn OR 7yw OR 7bw OR 7gw)]:
 ItemDisplay[MAG ETH !ID (scp OR gsc OR wsp OR 9sc OR 9qs OR 9ws OR 7sc OR 7qs OR 7ws)]:
@@ -942,7 +921,7 @@ ItemDisplay[RARE ETH !ID (tkf OR tax OR bkf OR bal OR 9tk OR 9ta OR 9bk OR 9b9 O
 ItemDisplay[RARE ETH !ID (jav OR pil OR ssp OR 9ja OR 9pi OR 9s9 OR 7ja OR 7pi OR 7s7)]:
 ItemDisplay[RARE ETH !ID (spr OR tri OR brn OR spt OR 9sr OR 9tr OR 9br OR 9st OR 7sr OR 7tr OR 7br OR 7st)]:
 ItemDisplay[RARE ETH !ID (bar OR vou OR scy OR pax OR hal OR wsc OR 9b7 OR 9vo OR 9s8 OR 9pa OR 9h9 OR 9wc OR 7o7 OR 7vo OR 7s8 OR 7pa OR 7h7 OR 7wc)]:
-ItemDisplay[RARE !ETH !ID (lxb OR mxb OR rxb OR 8lx OR 8mx OR 8rx OR 6lx OR 6mx OR 6rx)]:
+ItemDisplay[RARE !ETH !ID (lxb OR mxb OR rxb OR 8lx OR 8mx OR 8rx OR 6lx OR 6mx OR 6rx OR 6lw OR 8lw OR lwb OR 6hx OR 8hx OR hxb)]:
 ItemDisplay[RARE ETH !ID (sst OR lst OR cst OR bst OR wst OR 8ss OR 8ls OR 8bs OR 8ws OR 6ss OR 6ls OR 6cs OR 6bs OR 6ws)]:
 ItemDisplay[RARE ETH !ID (wnd OR ywn OR bwn OR gwn OR 9wn OR 9yw OR 9bw OR 9gw OR 7wn OR 7yw OR 7bw OR 7gw)]:
 ItemDisplay[RARE ETH !ID (scp OR gsc OR wsp OR 9sc OR 9qs OR 9ws OR 7sc OR 7qs OR 7ws)]:
@@ -954,7 +933,7 @@ ItemDisplay[RARE (EQ1 OR EQ2 OR EQ3 OR EQ4 OR EQ5 OR EQ6) ETH]:
 ItemDisplay[MAG ARMOR ETH]:
 ItemDisplay[MAG (CL1 OR CL2 OR CL3 OR CL4 OR CL6) ETH]:
 ItemDisplay[(WEAPON OR ARMOR) NMAG !SUP !ETH !RW !CL5 !WP9]:
-ItemDisplay[(ARMOR OR WEAPON) MAG !ID !ETH !cm1 !cm3 !amu !lwb !8lw !6lw CLVL>70]:
+ItemDisplay[(ARMOR OR WEAPON) MAG !ID !ETH !cm1 !cm3 !amu CLVL>70]:
 ItemDisplay[(ARMOR OR WEAPON) RARE !ID !ETH CLVL>70]:
 ItemDisplay[SET !ELT CLVL>85]:
 ItemDisplay[NMAG !RW ID (NORM OR EXC OR ELT) CLVL<65]: %NAME% 
