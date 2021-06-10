@@ -112,13 +112,13 @@ ItemDisplay[mp4 CLVL>59]:
 --------------------------------------------------------------------------------------------------------------------------------
 //BASE ED
 ----//ED
-ItemDisplay[WEAPON NMAG !RW (ED>0 AND ED<15) CLVL<90]:%GRAY%%NAME% %GRAY%[%GREEN%ED%GRAY%]%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[WEAPON NMAG !RW ED=15]:%GRAY%%NAME% %GRAY%[%RED%+15% %GREEN%ED%GRAY%]%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[WEAPON NMAG !RW ED<15 CVLV>89 !7wa]:
+ItemDisplay[WEAPON NMAG RW (ED>0 AND ED<15) CLVL<90]:%WHITE%[%GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[WEAPON NMAG RW ED=15]:%WHITE%[%RED%+15% %GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[WEAPON NMAG RW ED<15 CVLV>89 !7wa]:
 
-ItemDisplay[ARMOR NMAG !RW (ED>0 AND ED<15) CLVL<90]:%GRAY%%NAME% %GRAY%[%GREEN%ED%GRAY%]%CONTINUE%
-ItemDisplay[ARMOR NMAG !RW (ED>0 AND ED<15) !RW CLVL>90]:
-ItemDisplay[ARMOR NMAG !RW ED=15]:%GRAY%%NAME% %GRAY%[%RED%+15% %GREEN%ED%GRAY%]%CONTINUE%
+ItemDisplay[ARMOR NMAG RW (ED>0 AND ED<15) CLVL<90]:%GRAY%[%GREEN%ED%GRAY%] %GRAY%%NAME%%CONTINUE%
+ItemDisplay[ARMOR NMAG RW (ED>0 AND ED<15) !RW CLVL>90]:
+ItemDisplay[ARMOR NMAG RW ED=15]:%WHITE%[%RED%+15% %GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%
 
 ----//ETH
 ItemDisplay[ETH UNI !ID WEAPON]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
@@ -943,7 +943,4 @@ ItemDisplay[NMAG !RW ID (NORM OR EXC OR ELT) CLVL>64]:
 ItemDisplay[INF ILVL<10 !RW !leg]:%NAME%
 ItemDisplay[INF !RW !leg]:
 ItemDisplay[aqv NMAG]:
-<<<<<<< HEAD
-ItemDisplay[cqv NMAG]:
-=======
 ItemDisplay[cqv NMAG]:
