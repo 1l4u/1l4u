@@ -943,4 +943,7 @@ ItemDisplay[NMAG !RW ID (NORM OR EXC OR ELT) CLVL>64]:
 ItemDisplay[INF ILVL<10 !RW !leg]:%NAME%
 ItemDisplay[INF !RW !leg]:
 ItemDisplay[aqv NMAG]:
+<<<<<<< HEAD
+ItemDisplay[cqv NMAG]:
+=======
 ItemDisplay[cqv NMAG]:
