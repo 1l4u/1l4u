@@ -112,13 +112,13 @@ ItemDisplay[mp4 CLVL>59]:
 --------------------------------------------------------------------------------------------------------------------------------
 //BASE ED
 ----//ED
-ItemDisplay[WEAPON NMAG RW (ED>0 AND ED<15) CLVL<90]:%WHITE%[%GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[WEAPON NMAG RW ED=15]:%WHITE%[%RED%+15% %GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[WEAPON NMAG RW ED<15 CVLV>89 !7wa]:
+ItemDisplay[WEAPON NMAG (ED>0 AND ED<15) CLVL<90]:%WHITE%[%GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[WEAPON NMAG ED=15]:%WHITE%[%RED%+15% %GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[WEAPON NMAG ED<15 CVLV>89 !RW !7wa]:
 
-ItemDisplay[ARMOR NMAG RW (ED>0 AND ED<15) CLVL<90]:%GRAY%[%GREEN%ED%GRAY%] %GRAY%%NAME%%CONTINUE%
-ItemDisplay[ARMOR NMAG RW (ED>0 AND ED<15) !RW CLVL>90]:
-ItemDisplay[ARMOR NMAG RW ED=15]:%WHITE%[%RED%+15% %GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%
+ItemDisplay[ARMOR NMAG (ED>0 AND ED<15) CLVL<90]:%GRAY%[%GREEN%ED%GRAY%] %GRAY%%NAME%%CONTINUE%
+ItemDisplay[ARMOR NMAG (ED>0 AND ED<15) !RW CLVL>90]:
+ItemDisplay[ARMOR NMAG ED=15]:%WHITE%[%RED%+15% %GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%
 
 ----//ETH
 ItemDisplay[ETH UNI !ID WEAPON]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
@@ -678,13 +678,8 @@ ItemDisplay[cm3 MAG !ID ILVL>90]:%BLUE%* %BLUE%%NAME% %GRAY%[%ORANGE%%ILVL%%GRAY
 
 --------------------------------------------------------------------------------------------------------------------------------
 //Rares
-ItemDisplay[RARE ci0 !ID]:%YELLOW%* %NAME% *%MAP-A8%%BORDER-62%
-ItemDisplay[RARE ci1 !ID]:%YELLOW%* %NAME% *%MAP-A8%%BORDER-62%
-ItemDisplay[RARE ci2 !ID]:%YELLOW%* %NAME% *%MAP-A8%%BORDER-62%
-ItemDisplay[RARE ci3 !ID]:%YELLOW%* %NAME% *%MAP-A8%%BORDER-62%
-ItemDisplay[RARE amu !ID]:%YELLOW%* %NAME% *%MAP-A8%%BORDER-62%
-ItemDisplay[RARE rin !ID]:%YELLOW%* %NAME% *%MAP-A8%%BORDER-62%
-ItemDisplay[RARE EQ4 !ID]:%YELLOW%* %NAME% *%MAP-A8%%BORDER-62%
+ItemDisplay[RARE (EQ1 OR EQ4 OR EQ5 OR EQ7) !ID]:%YELLOW%* %NAME%
+ItemDisplay[RARE (amu OR rin) !ID]:%YELLOW%* %NAME%
 ItemDisplay[RARE jew !ID]:%YELLOW%* %NAME% *%MAP-A8%%BORDER-62%
 ItemDisplay[RARE vbl !ID CLVL>40]:
 ItemDisplay[RARE lbl !ID CLVL>40]:
