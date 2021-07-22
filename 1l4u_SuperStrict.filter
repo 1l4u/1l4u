@@ -617,7 +617,8 @@ ItemDisplay[cm3 MAG !ID ILVL>90]:%BLUE%* %BLUE%%NAME% %GRAY%[%ORANGE%%ILVL%%GRAY
 
 --------------------------------------------------------------------------------------------------------------------------------
 //Rares
-ItemDisplay[RARE (EQ1 OR EQ4 OR EQ5 OR EQ7) !ID]:%YELLOW%* %NAME%
+ItemDisplay[RARE (EQ4 OR EQ5 OR EQ7) !ID !ETH]:%YELLOW%* %NAME%
+ItemDisplay[RARE (CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7) !ID !ETH]:%YELLOW%* %NAME%
 ItemDisplay[RARE (amu OR rin) !ID]:%YELLOW%* %NAME%
 ItemDisplay[RARE jew !ID]:%YELLOW%* %NAME% *%MAP-A8%%BORDER-62%
 ItemDisplay[RARE vbl !ID CLVL>40]:
