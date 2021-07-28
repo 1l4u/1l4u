@@ -7,7 +7,7 @@
 
 //Discription
 ItemDisplay[CRAFT WEAPON ID ETH SOCK=0]:%GRAY%[%WHITE%Eth%GRAY%] %ORANGE%%NAME%
-ItemDisplay[MAG WEAPON ID ETH SOCK=0]:%GRAY%[%WHITE%Eth%GRAY%] %BLUE%%NAME%{%WHITE%-Hit:%ORANGE% Tir%WHITE% +%BLUE% O %White%-Caster:%ORANGE% Tir%WHITE% +%PURPLE% O %WHITE%-Blood:%ORANGE% Ort%WHITE% +%RED% O}
+ItemDisplay[MAG WEAPON ID ETH SOCK=0]:%GRAY%[%WHITE%Eth%GRAY%]%BLUE%%NAME%{%WHITE%-Hit:%ORANGE% Tir%WHITE% +%BLUE% O %White%-Caster:%ORANGE% Tir%WHITE% +%PURPLE% O %WHITE%-Blood:%ORANGE% Ort%WHITE% +%RED% O}
 ItemDisplay[MAG WEAPON ID !ETH SOCK=0]:%BLUE%%NAME%{%WHITE%-Hit:%ORANGE% Tir%WHITE% +%BLUE% O %White%-Caster:%ORANGE% Tir%WHITE% +%PURPLE% O %WHITE%-Blood:%ORANGE% Ort%WHITE% +%RED% O}
 ItemDisplay[MAG WEAPON ID !ETH SOCK>0]:%BLUE%%NAME%%GRAY%[%WHITE%%SOCKETS%%GRAY%]{%WHITE%-Hit:%ORANGE% Tir%WHITE% +%BLUE% O %White%-Caster:%ORANGE% Tir%WHITE% +%PURPLE% O %WHITE%-Blood:%ORANGE% Ort%WHITE% +%RED% O}
 ItemDisplay[RARE WEAPON ID ETH SOCK=0]:%GRAY%[%WHITE%Eth%GRAY%] %YELLOW%%NAME%
@@ -85,7 +85,7 @@ ItemDisplay[GOLD<499 CLVL>49]:
 ItemDisplay[GOLD<999 CLVL>59]:
 ItemDisplay[GOLD<2999 CLVL>69]:
 ItemDisplay[GOLD<4999 CLVL>79]:
-ItemDisplay[GOLD<9999 CLVL>89]:
+ItemDisplay[GOLD<7999 CLVL>89]:
 --------------------------------------------------------------------------------------------------------------------------------
 //Potions
 ItemDisplay[rvl]:%PURPLE%* %PURPLE%R%WHITE%65% %PURPLE%*
@@ -114,9 +114,9 @@ ItemDisplay[mp4 CLVL>59]:
 --------------------------------------------------------------------------------------------------------------------------------
 //BASE ED
 ----//ED
-ItemDisplay[WEAPON NMAG (ED>0 AND ED<15) CLVL<90]:%WHITE%[%GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[WEAPON NMAG ED=15]:%WHITE%[%RED%+15% %GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[WEAPON NMAG ED<15 CVLV>89 !RW !7wa]:
+ItemDisplay[WEAPON NMAG (ED>0 AND ED<15) CLVL<90]:%WHITE%[%GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%
+ItemDisplay[WEAPON NMAG ED=15]:%WHITE%[%RED%+15% %GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%
+//ItemDisplay[WEAPON NMAG ED<15 CVLV>89 !RW !7wa]:
 
 ItemDisplay[ARMOR NMAG (ED>0 AND ED<15) CLVL<90]:%GRAY%[%GREEN%ED%GRAY%] %GRAY%%NAME%%CONTINUE%
 ItemDisplay[ARMOR NMAG (ED>0 AND ED<15) !RW CLVL>90]:
@@ -125,10 +125,10 @@ ItemDisplay[ARMOR NMAG ED=15]:%WHITE%[%RED%+15% %GREEN%ED%WHITE%] %GRAY%%NAME%%C
 ----//ETH
 ItemDisplay[ETH UNI !ID WEAPON]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%
 ItemDisplay[ETH UNI ID WEAPON]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%
-ItemDisplay[ETH MAG WEAPON !ID]:%GRAY%[%WHITE%Eth%GRAY%] %BLUE%%NAME%%GRAY%%CONTINUE%
-ItemDisplay[ETH RARE WEAPON !ID]:%GRAY%[%WHITE%Eth%GRAY%] %YELLOW%%NAME%%GRAY%%CONTINUE%
-ItemDisplay[ETH CRAFT WEAPON !ID]:%GRAY%[%WHITE%Eth%GRAY%] %ORANGE%%NAME%%GRAY%%CONTINUE%
-ItemDisplay[ETH NMAG WEAPON ELT]:%GRAY%[%WHITE%Eth%GRAY%] %NAME%%GRAY%%CONTINUE%
+ItemDisplay[ETH MAG WEAPON !ID]:%GRAY%[%WHITE%Eth%GRAY%] %BLUE%%NAME%%CONTINUE%
+ItemDisplay[ETH RARE WEAPON !ID]:%GRAY%[%WHITE%Eth%GRAY%] %YELLOW%%NAME%%CONTINUE%
+ItemDisplay[ETH CRAFT WEAPON !ID]:%GRAY%[%WHITE%Eth%GRAY%] %ORANGE%%NAME%%CONTINUE%
+ItemDisplay[ETH NMAG WEAPON ELT]:%GRAY%[%WHITE%Eth%GRAY%] %NAME%%CONTINUE%
 
 ItemDisplay[ETH UNI !ID ARMOR]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%
 ItemDisplay[ETH UNI ID ARMOR]:%GRAY%[%WHITE%Eth%GRAY%] %GOLD%%NAME%%CONTINUE%
@@ -299,16 +299,16 @@ ItemDisplay[UNI !ID]:%RED%* %GOLD%%NAME% %RED%*%BORDER-A5%%DOT-62%
 ItemDisplay[UNI ID SOCK>0]:%NAME% %GRAY%[%WHITE%%SOCKETS%%GRAY%]%BORDER-4B%%DOT-0C%%CONTINUE%
 
 ----//Other
-ItemDisplay[WEAPON NORM UNI ID]: %NAME%{%WHITE%Upgrade: %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ %GREEN%Emerald%NL%%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[WEAPON EXC UNI ID]: %NAME%{%WHITE%Upgrade: %ORANGE%Lum %WHITE%+ %ORANGE%Pul %WHITE%+ %GREEN%Emerald%NL%%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
-ItemDisplay[WEAPON ELT UNI ID]: %NAME%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[WEAPON NORM UNI ID]: %NAME%{%WHITE%Upgrade: %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ %GREEN%Emerald%NL%}
+ItemDisplay[WEAPON EXC UNI ID]: %NAME%{%WHITE%Upgrade: %ORANGE%Lum %WHITE%+ %ORANGE%Pul %WHITE%+ %GREEN%Emerald%NL%}
+ItemDisplay[WEAPON ELT UNI ID]: %NAME%
 
 --------------------------------------------------------------------------------------------------------------------------------
 //SET
 ItemDisplay[SET !ID !ELT !rin !amu CLVL>80]:
 ItemDisplay[SET !ID !ELT CLVL<80]:%GREEN%* %NAME% *%DOT-84%
 ItemDisplay[SET !ID ELT]:%GREEN%* %NAME% *%DOT-84%
-ItemDisplay[SET WEAPON ID ELT]:%GREEN%* %NAME% *{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[SET WEAPON ID ELT]:%GREEN%* %NAME% *
 ItemDisplay[SET amu]:%GREEN%* %NAME% *
 ItemDisplay[SET rin]:%GREEN%* %NAME% *
 --------------------------------------------------------------------------------------------------------------------------------
@@ -626,7 +626,6 @@ ItemDisplay[RARE lbl !ID CLVL>40]:
 ItemDisplay[(ARMOR OR WEAPON) RARE !ID !ETH]:
 --------------------------------------------------------------------------------------------------------------------------------
 //CRAFT
-ItemDisplay[WEAPON CRAFT]:%NAME%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
 ----//Claws
 ItemDisplay[CL5 CRAFT (SK262=3)]:%DARK_GREEN%+3 Wake Fire %ORANGE%%NAME%
 ItemDisplay[CL5 CRAFT (SK261=3)]:%DARK_GREEN%+3 Charged Bolt Sentry %ORANGE%%NAME%
@@ -689,7 +688,7 @@ ItemDisplay[NMAG (7vo OR 7s8 OR 7pa OR 7h7 OR 7wc OR 7br OR 7p7 OR 7st OR 7sr OR
 ItemDisplay[NMAG (7vo OR 7s8 OR 7pa OR 7h7 OR 7wc OR 7br OR 7p7 OR 7st OR 7sr OR 7ja OR 7pi OR 7s7 OR 7gl OR 7ts) CLVL>89 !RW]:
 
 ----//Call to Arms
-ItemDisplay[NMAG (crs OR fla) (SOCK=0 OR SOCK=5) CLVL<80]:%NAME%{%WHITE%-Speed: %TAN%%WPNSPD%%WHITE% -Range: %TAN%%RANGE%}
+ItemDisplay[NMAG (crs OR fla) (SOCK=0 OR SOCK=5) CLVL<80]:%NAME%
 ItemDisplay[NMAG (crs OR fla) (SOCK=0 OR SOCK=5) !RW CLVL>79]:
 
 ----//Norm/Exc Polearms/Spears
