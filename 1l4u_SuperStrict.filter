@@ -119,7 +119,7 @@ ItemDisplay[WEAPON NMAG ED=15]:%WHITE%[%RED%+15% %GREEN%ED%WHITE%] %GRAY%%NAME%%
 //ItemDisplay[WEAPON NMAG ED<15 CVLV>89 !RW !7wa]:
 
 ItemDisplay[ARMOR NMAG (ED>0 AND ED<15) CLVL<90]:%GRAY%[%GREEN%ED%GRAY%] %GRAY%%NAME%%CONTINUE%
-ItemDisplay[ARMOR NMAG (ED>0 AND ED<15) !RW CLVL>90]:
+//ItemDisplay[ARMOR NMAG (ED>0 AND ED<15) !RW CLVL>90]:
 ItemDisplay[ARMOR NMAG ED=15]:%WHITE%[%RED%+15% %GREEN%ED%WHITE%] %GRAY%%NAME%%CONTINUE%
 
 ----//ETH
@@ -661,9 +661,9 @@ ItemDisplay[NMAG (EQ1 OR EQ7) ELT ED=15 !SOCK=1 !SOCK=2]:%RED%* %GRAY%%NAME% %RE
 ItemDisplay[NMAG (EQ1 OR EQ7) !RW ETH]:
 
 ----//Hide
-ItemDisplay[NMAG CHEST ETH !SOCK=1 !RW ELT CLVL>90]:
+//ItemDisplay[NMAG CHEST ETH !SOCK=1 !RW ELT CLVL>90]:
 ItemDisplay[NMAG CHEST !ETH !SOCK=1 !RW ELT CLVL>90]:
-ItemDisplay[NMAG CHEST ETH !SOCK= !RW ELT (ED>0 AND ED<15) CLVL>90]:
+//ItemDisplay[NMAG CHEST ETH !SOCK= !RW ELT (ED>0 AND ED<15) CLVL>90]:
 ItemDisplay[NMAG CHEST !ETH !SOCK=1 !RW ELT (ED>0 AND ED<15) CLVL>90]:
 
 ItemDisplay[NMAG xtp ETH !RW !SOCK=1 (ED>0 AND ED<15) CLVL>90]:
@@ -685,7 +685,7 @@ ItemDisplay[NMAG (7vo OR 7s8 OR 7pa OR 7h7 OR 7wc OR 7br OR 7p7 OR 7st OR 7sr OR
 ItemDisplay[NMAG (7vo OR 7s8 OR 7pa OR 7h7 OR 7wc OR 7br OR 7p7 OR 7st OR 7sr OR 7ja OR 7pi OR 7s7 OR 7gl OR 7ts) ETH ED=15]: %GRAY%%NAME%
 ItemDisplay[NMAG (7vo OR 7s8 OR 7pa OR 7h7 OR 7wc OR 7br OR 7p7 OR 7st OR 7sr OR 7ja OR 7pi OR 7s7 OR 7gl OR 7ts) !ETH CLVL<90]: %GRAY%%NAME%
 ItemDisplay[NMAG (7vo OR 7s8 OR 7pa OR 7h7 OR 7wc OR 7br OR 7p7 OR 7st OR 7sr OR 7ja OR 7pi OR 7s7 OR 7gl OR 7ts) !ETH ED=15 CLVL<90]: %GRAY%%NAME%{
-ItemDisplay[NMAG (7vo OR 7s8 OR 7pa OR 7h7 OR 7wc OR 7br OR 7p7 OR 7st OR 7sr OR 7ja OR 7pi OR 7s7 OR 7gl OR 7ts) CLVL>89 !RW]:
+//ItemDisplay[NMAG (7vo OR 7s8 OR 7pa OR 7h7 OR 7wc OR 7br OR 7p7 OR 7st OR 7sr OR 7ja OR 7pi OR 7s7 OR 7gl OR 7ts) CLVL>89 !RW]:
 
 ----//Call to Arms
 ItemDisplay[NMAG (crs OR fla) (SOCK=0 OR SOCK=5) CLVL<80]:%NAME%
@@ -702,7 +702,7 @@ ItemDisplay[(7wa OR 7cr OR 7gi OR 7gm OR 7p7 OR 7fb OR 7gd OR 7ga) MAG ETH]:%NAM
 ItemDisplay[(7wa OR 7cr OR 7gi OR 7gm OR 7p7 OR 7fb OR 7gd OR 7ga) NMAG !ETH ED=15]:%NAME%
 ItemDisplay[(7fb OR 7wa OR 7gd OR 7gi OR 7ga) ETH NMAG ED=15]:%NAME%
 ItemDisplay[(7fb OR 7wa OR 7gd OR 7gi OR 7ga) ETH NMAG]:%NAME%
-ItemDisplay[(7wa OR 7cr OR 7gi OR 7gm OR 7p7 OR 7fb OR 7gd OR 7ga) NMAG !RW !ETH ED<0]:
+//ItemDisplay[(7wa OR 7cr OR 7gi OR 7gm OR 7p7 OR 7fb OR 7gd OR 7ga) NMAG !RW !ETH ED<0]:
 
 ----//Plague
 ItemDisplay[(obf OR oba OR ob5) NMAG (SOCK=3 OR SOCK=0) (SK62=3)]:%DARK_GREEN%+3 Hydra %GRAY%%NAME%
