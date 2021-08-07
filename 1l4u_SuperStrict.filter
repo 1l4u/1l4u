@@ -296,7 +296,7 @@ ItemDisplay[UNI !ID]:%RED%* %GOLD%%NAME% %RED%*%BORDER-A5%%DOT-62%
 --------------------------------------------------------------------------------------------------------------------------------
 //UNIQUE Indentify
 ----//Socket Unique
-ItemDisplay[UNI ID SOCK>0]:%NAME% %GRAY%[%WHITE%%SOCKETS%%GRAY%]%BORDER-4B%%DOT-0C%%CONTINUE%
+ItemDisplay[UNI ID SOCK>0]:%NAME% %GRAY%[%WHITE%%SOCKETS%%GRAY%]%CONTINUE%
 
 ----//Other
 ItemDisplay[WEAPON NORM UNI ID]: %NAME%{%WHITE%Upgrade: %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ %GREEN%Emerald%NL%}
